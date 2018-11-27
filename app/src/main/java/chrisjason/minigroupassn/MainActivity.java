@@ -72,9 +72,14 @@ public class MainActivity extends Activity {
             if (resultCode == Activity.RESULT_OK) {
                 int score = data.getExtras().getInt("score");
                 String message = "I got a score of " + String.valueOf(score) +
-                        "/5 in a quiz based on Android Studio! See if you can do better!";
+                        "/5 in a quiz based on Android Studio! See if you can ";
+                if (score == 5) {
+                    message += "match my score!";
+                } else {
+                    message += "do better!";
+                }
                 mSMSText.setText(message);
-                Toast.makeText(this, "Thanks for completing the quiz! Send a text to a friend to challenge them.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Thanks for completing the quiz! Send a text to a friend to challenge them.", Toast.LENGTH_LONG).show();
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 Toast.makeText(this, "Quiz cancelled.", Toast.LENGTH_SHORT).show();
             }
