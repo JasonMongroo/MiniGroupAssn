@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -50,6 +51,19 @@ public class MainActivity extends Activity {
 
                 String phoneNo = mPhoneNo.getText().toString();
                 String sms = mSMSText.getText().toString();
+
+                Log.d("DEGBUG:", "Phone no = \"" + phoneNo + "\"");
+                Log.d("DEGBUG:", "SMS = \"" + sms + "\"");
+
+
+                if (phoneNo.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter a phone number.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (sms.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter a message to send.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
