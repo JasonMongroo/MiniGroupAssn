@@ -1,6 +1,7 @@
 package chrisjason.minigroupassn;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
     Button sendButton;
     EditText mPhoneNo;
     EditText mSMSText;
+    Button quizButton;
 
     @Override
 
@@ -25,6 +27,20 @@ public class MainActivity extends Activity {
         sendButton = (Button) findViewById(R.id.sendButton);
         mPhoneNo = (EditText) findViewById(R.id.mPhoneNo);
         mSMSText = (EditText) findViewById(R.id.mSMSText);
+
+        //get quiz button
+        quizButton= (Button) findViewById(R.id.quizbutton);
+
+        //set quiz on click listener
+        quizButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i= new Intent(getApplicationContext(), Quiz.class);
+                startActivity(i);
+            }
+        });
+
+
         SmsReceiver SMSr = new SmsReceiver();
         sendButton.setOnClickListener(new OnClickListener() {
 

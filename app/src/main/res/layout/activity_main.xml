@@ -45,4 +45,10 @@
         android:background="#E111F7"
         android:text="Send the SMS Message"/>
 
+    <Button
+        android:id="@+id/quizbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to quiz" />
+
 </LinearLayout>

@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">MiniGroupAssn</string>
+    <string name= "title_activity_quiz">Quiz</string>
+
+    <string-array name="q1">
+        <item>What is a Toast?</item>
+        <item>Heated bread</item>
+        <item>A toast provides simple feedback about an operation in a small popup</item>
+        <item>Message which permanently appears on bottom of screen</item>
+        <item>Temporary message which carries user to another screen then displays</item>
+    </string-array>
+
+    <string-array name="q2">
+        <item>What can an EditText do?</item>
+        <item>Allows user to edit a text once only</item>
+        <item>Allows user to open a word document for editing</item>
+        <item>Allows user to upload an image and description</item>
+        <item>Allows user to enter and modify text</item>
+    </string-array>
+
+    <string-array name="q3">
+        <item>Give an example of image resources which can be placed in an ImageView?</item>
+        <item>A self portrait in the Cubist style</item>
+        <item>A watercolour painting</item>
+        <item>Bitmap or Drawable</item>
+        <item>Crayon drawing</item>
+    </string-array>
+
+    <string-array name="q4">
+        <item>How many children does a spinner display at a time?</item>
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+    </string-array>
+
+    <string-array name="q5">
+        <item>What is a DatePicker?</item>
+        <item>Chooses a time and place for a romantic get together</item>
+        <item>Provides a widget for selecting a date</item>
+        <item>Selects a date that will become your new birthday</item>
+        <item>A widget that selects the current date</item>
+    </string-array>
+
+
 </resources>
