@@ -29,8 +29,8 @@ public class Quiz extends Activity {
         home.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i= new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                setResult(Activity.RESULT_CANCELED);
+                finish();
             }
         });
 
@@ -55,7 +55,8 @@ public class Quiz extends Activity {
                 Toast.makeText(getApplicationContext(), "Score:" + score, Toast.LENGTH_SHORT).show();
                 Intent i= new Intent(getApplicationContext(), MainActivity.class);
                 i.putExtra("score", score);
-                startActivity(i);
+                setResult(Activity.RESULT_OK, i);
+                finish();
             }
         });
     }

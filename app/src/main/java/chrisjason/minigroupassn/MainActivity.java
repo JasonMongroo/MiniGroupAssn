@@ -1,6 +1,7 @@
 package chrisjason.minigroupassn;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -36,7 +37,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view){
                 Intent i= new Intent(getApplicationContext(), Quiz.class);
-                startActivity(i);
+                startActivityForResult(i, 1);
             }
         });
 
@@ -65,4 +66,18 @@ public class MainActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                int score = data.getExtras().getInt("score");
+                String message = "I got a score of " + String.valueOf(score) +
+                        "/5 in a quiz based on Android Studio! See if you can do better!";
+                mSMSText.setText(message);
+                Toast.makeText(this, "Thanks for completing the quiz! Send a text to a friend to challenge them.", Toast.LENGTH_SHORT).show();
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                Toast.makeText(this, "Quiz cancelled.", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 }

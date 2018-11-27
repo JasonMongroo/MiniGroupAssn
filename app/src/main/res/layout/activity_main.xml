@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
+    android:padding="16dp"
     android:id="@+id/linearLayout1"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -18,6 +19,7 @@
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
+        android:background="#EEEEEE"
         android:id="@+id/mPhoneNo"  />
 
     <TextView
@@ -32,8 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:id="@+id/mSMSText"
-        android:textColor = "#FF0000"
-        android:gravity="top" android:lines="6"
+        android:background="#EEEEEE"
+        android:gravity="top"
+        android:lines="6"
         android:inputType="textMultiLine"/>
 
 
@@ -41,14 +44,26 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:id="@+id/sendButton"
-        android:textColor = "#FFFFFF"
-        android:background="#E111F7"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:background="#FF0000"
         android:text="Send the SMS Message"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Try taking a quiz and challenging a friend with your score!"/>
 
     <Button
         android:id="@+id/quizbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFFFFF"
+        android:background="#FF0000"
         android:text="Go to quiz" />
 
 </LinearLayout>
